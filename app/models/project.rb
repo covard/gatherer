@@ -3,6 +3,6 @@ class Project < ActiveRecord::Base
   has_many :tasks
 
   def done?
-    self.tasks.blank?
+    self.tasks.reject(&:complete?).empty?
   end
 end
