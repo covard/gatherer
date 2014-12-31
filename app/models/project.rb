@@ -1,5 +1,8 @@
 class Project < ActiveRecord::Base
+  # relationships
+  has_many :tasks
+
   def done?
-    true
+    self.tasks.blank?
   end
 end
