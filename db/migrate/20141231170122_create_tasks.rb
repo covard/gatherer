@@ -6,6 +6,7 @@ class CreateTasks < ActiveRecord::Migration
       t.text        :description
       t.float       :total_hours
       t.float       :completed_hours
+      t.boolean     :is_complete, default: false
 
       t.timestamps null: false
     end

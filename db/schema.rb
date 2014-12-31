@@ -29,8 +29,9 @@ ActiveRecord::Schema.define(version: 20141231170122) do
     t.text     "description"
     t.float    "total_hours"
     t.float    "completed_hours"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.boolean  "is_complete",     default: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   add_index "tasks", ["project_id"], name: "index_tasks_on_project_id", using: :btree
