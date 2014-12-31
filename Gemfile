@@ -41,4 +41,5 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
   gem 'pry-rails'
+  gem 'guard-rspec', require: false
 end
